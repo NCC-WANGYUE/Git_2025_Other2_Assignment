@@ -1,15 +1,21 @@
 window.onload = function () {
-  const correctAnswer = "プロトタイピング"; 
-  const buttons = document.querySelectorAll(".choice");
-  const result = document.getElementById("result");
+  const form = document.getElementById("quizForm");
+  const correctAnswer = "プロトタイピング";
 
-  buttons.forEach(button => {
-    button.addEventListener("click", function () {
-      if (this.textContent === correctAnswer) {
-        result.textContent = "正解！";
-      } else {
-        result.textContent = "不正解…";
-      }
-    });
-  });
+  form.onsubmit = function (e) {
+    e.preventDefault(); 
+
+    const selected = document.querySelector('input[name="answer"]:checked');
+    
+    if (!selected) {
+      alert("選択肢を選んでください。");
+      return;
+    }
+
+    if (selected.value === correctAnswer) {
+      alert("正解！");
+    } else {
+      alert("不正解…");
+    }
+  };
 };

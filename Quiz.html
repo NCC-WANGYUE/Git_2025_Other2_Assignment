@@ -2,17 +2,20 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>Quiz</title>
+  <title>クイズ</title>
 </head>
 <body>
-  <div id="quiz">
-    <h2>システム開発の早い段階で、目に見える形で利用者の要求が確認できるように確認用のソフトウエアを作成するソフトウエア開発モデルとして、最も適切なものはどれか。</h2>
-    <button class="choice">アジャイル</button>
-    <button class="choice">ウォーターフォール</button>
-    <button class="choice">スパイラル</button>
-    <button class="choice">プロトタイピング</button>
-    <p id="result"></p>
-  </div>
+  <h2>システム開発の早い段階で、目に見える形で利用者の要求が確認できるように確認用のソフトウエアを作成するソフトウエア開発モデルとして、最も適切なものはどれか。</h2>
+
+  <form id="quizForm">
+    <label><input type="radio" name="answer" value="アジャイル"> アジャイル</label><br>
+    <label><input type="radio" name="answer" value="ウォーターフォール"> ウォーターフォール</label><br>
+    <label><input type="radio" name="answer" value="スパイラル"> スパイラル</label><br>
+    <label><input type="radio" name="answer" value="プロトタイピング"> プロトタイピング</label><br><br>
+    
+    <button type="submit">回答する</button>
+  </form>
+
   <script src="Quiz.js"></script>
 </body>
 </html>
